@@ -336,16 +336,32 @@ export function TextToDialoguePromptBar({
 }
 
 const FEATURED_VOICES = [
-  { id: "EkK5I93UQWFDigLMpZcX", name: "James", accent: "American" },
-  { id: "RILOU7YmBhvwJGDGjNmP", name: "Jane", accent: "American" },
-  { id: "21m00Tcm4TlvDq8ikWAM", name: "Rachel", accent: "American" },
-  { id: "AZnzlk1XvdvUeBnXmlld", name: "Domi", accent: "American" },
-  { id: "IKne3meq5aSn9XLyUdCD", name: "Adam", accent: "American" },
-  { id: "pNInz6obpgDQGcFmaJgB", name: "Nicole", accent: "American" },
-  { id: "ErXwobaYiN019PkySvjV", name: "Antoni", accent: "American" },
-  { id: "MF3mGyEYCl7XYWbV9V6O", name: "Elli", accent: "American" },
-  { id: "jBpfuIE2acCO8z3wKNLl", name: "Callum", accent: "British" },
-  { id: "onwK4e9ZLuTAKqWW03F9", name: "Charlotte", accent: "British" },
+  {
+    id: "EkK5I93UQWFDigLMpZcX",
+    name: "James",
+    accent: "American",
+  },
+  {
+    id: "RILOU7YmBhvwJGDGjNmP",
+    name: "Jane",
+    accent: "British",
+  },
+  {
+    id: "NFG5qt843uXKj4pFvR7C",
+    name: "Adam",
+    accent: "British",
+  },
+  { id: "56AoDkrOh6qfVPDXZ7Pt", name: "Cassidy", accent: "American" },
+  {
+    id: "cgSgspJ2msm6clMCkdW9",
+    name: "Hope",
+    accent: "American",
+  },
+  {
+    id: "UgBBYS2sOqTuMpoF3BR0",
+    name: "Mark",
+    accent: "American",
+  },
 ];
 
 const TTS_MODEL_INFO = {
