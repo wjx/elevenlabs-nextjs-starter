@@ -1,4 +1,4 @@
-![Frame 514831260](https://github.com/user-attachments/assets/615d8a31-c5b0-43b6-8fb9-3f52132ff76e)
+![Header image](https://repository-images.githubusercontent.com/1041806291/3bfb7574-9799-43d2-a653-a9f9a680ca0e)
 
 <p align="center">
   ElevenLabs open-source Next.js Audio Starter Kit
