@@ -53,3 +53,32 @@ export async function streamToBase64(audioStream: ReadableStream<Uint8Array>): P
 
   return Buffer.from(combined).toString('base64');
 }
+
+export async function concatenateAudioStreams(streams: ReadableStream<Uint8Array>[]): Promise<string> {
+  const allChunks: Uint8Array[] = [];
+
+  // Process each stream and collect all chunks
+  for (const stream of streams) {
+    const reader = stream.getReader();
+    try {
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
+        allChunks.push(value);
+      }
+    } finally {
+      reader.releaseLock();
+    }
+  }
+
+  // Concatenate all chunks into a single Uint8Array
+  const totalLength = allChunks.reduce((acc, chunk) => acc + chunk.length, 0);
+  const combined = new Uint8Array(totalLength);
+  let offset = 0;
+  for (const chunk of allChunks) {
+    combined.set(chunk, offset);
+    offset += chunk.length;
+  }
+
+  return Buffer.from(combined).toString('base64');
+}
