@@ -27,11 +27,10 @@ export async function generateSpeech(
 
     // throw new Error('Simulated error for testing error handling');
     // Generate audio for each segment with limited concurrency
-    // TODO: put in request, which contains params
     const CONCURRENCY_LIMIT = 3; // Limit to 3 concurrent requests
     const audioStreams = await processWithConcurrency(
       segments,
-      (segment) => client.textToSpeech.convert(voiceId, { text: segment }),
+      (segment) => client.textToSpeech.convert(voiceId, { ...request, text: segment }),
       CONCURRENCY_LIMIT
     );
 
